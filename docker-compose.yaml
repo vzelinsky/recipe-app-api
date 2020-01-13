@@ -1,0 +1,12 @@
+version: "3"
+
+services: 
+    app:
+        build: 
+            context: .
+        ports:
+            - "8000:8000" # maps host's 8000 to container's port 8000
+        volumes:
+            - ./app:/app # maps local app folder to container's app folder for live updates
+        command: >
+            sh -c "python manage.py runserver 0.0.0.0:8000"
