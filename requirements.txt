@@ -2,3 +2,5 @@
 Django>=2.1.3,<2.2.0
 # using <3.10.0 for tutorial purposes
 djangorestframework>=3.9.0,<3.10.0
+# using <3.7.0 for tutorial purposes
+flake8>=3.6.0,<3.7.0

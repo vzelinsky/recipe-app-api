@@ -1,0 +1,15 @@
+# spin up a python server
+language: python
+python:
+    - "3.6"
+
+# make docker service available
+services:
+    - docker
+
+# install docker-compose
+before_script: pip install docker-compose
+
+# run test and lint
+script: 
+    - docker-compose run app sh -c "python manage.py test && flake8"
